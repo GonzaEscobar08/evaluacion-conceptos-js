@@ -50,6 +50,13 @@
 //     }
 // }
 //Ejercicio 5
-let dias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
+let dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
 for (let i=0;i<dias.length;i++){
-    console.log(dias[i])
+    if(dias[i] === "Sabado" || dias[i] === "Domingo"){
+        alert(`${dias[i]} - Fin de semana!`)
+    }
+    else{
+        alert(dias[i])
+    }
+
+}
