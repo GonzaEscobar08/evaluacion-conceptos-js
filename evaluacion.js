@@ -20,3 +20,19 @@ if (a == b && a == c && b == c){
 else{
     document.write("Los 3 numeros no son iguales")
 }
+//Ejercicio f 
+let peso = parseInt(prompt("Ingrese su peso en Kg: "))
+let altura = parseFloat(prompt("Ingrese su altura en metros: "))
+let indice = peso/(altura^2)
+if (indice < 18.5 ){
+    alert(`Bajo Peso ${indice}`)
+}
+else if(18.6 < indice < 24.9){
+    alert(`Normal ${indice}`)
+}
+else if(25 < indice < 29.9){
+    alert(`Sobrepeso ${indice}`)
+}
+else if( indice > 30){
+    alert(`Obesidad ${indice}`)
+}
