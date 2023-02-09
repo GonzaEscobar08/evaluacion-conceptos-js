@@ -36,3 +36,16 @@ else if(25 < indice < 29.9){
 else if( indice > 30){
     alert(`Obesidad ${indice}`)
 }
+//Ejercicio 4
+let valor=0;
+
+while(valor != 1){
+    valor = parseInt(prompt("Ingrese un valor numero"));
+    if(isNaN(valor)){
+        console.log("INGRESE UN VALOR NUMERICO!");
+        valor = 0;
+    }else{
+        console.log("EL VALOR INGRESADO ES UN NUMERO.");
+        valor = 1;
+    }
+}
