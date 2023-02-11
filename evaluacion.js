@@ -81,7 +81,5 @@ while(art){
     }
 }
 console.log(carrito)
-document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito[i]} <br> Total a facturar: $${total}`)
+document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito} <br> Total a facturar: $${total}`)
 console.log(total)
-
-
