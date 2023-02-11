@@ -60,7 +60,31 @@
 //     }
 
 // }
-// Ejercicio 6 
+// // Ejercicio 6 
+// let carrito = []
+// let art = true
+// let i = 0
+// let total = 0
+// while(art){
+//     let articulo = prompt("Ingrese articulo: ")
+    
+//     if(articulo != 0){
+//         carrito[i] = articulo
+//         i++
+//         let costo = prompt("Ingrese monto producto: ")
+//         let cantidad = prompt("Cantidad de articulos: ")
+//         let precio = costo * cantidad
+//         total = total + precio
+//     }
+//     else{
+//         art = false
+//     }
+// }
+// console.log(carrito)
+// document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito} <br> Total a facturar: $${total}`)
+// console.log(total)
+
+//Ejercicio 7
 let carrito = []
 let art = true
 let i = 0
@@ -78,7 +102,15 @@ while(art){
     }
     else{
         art = false
-    }
+    }    
+}
+
+while(confirm("Desea modificar el carrito?") === true){
+    let indice = prompt("Indique indice a modificar: ")
+    if(indice == true){
+        carrito[indice] = prompt("Ingrese articulo: ")
+        console.log(carrito[indice])
+        }
 }
 console.log(carrito)
 document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito} <br> Total a facturar: $${total}`)
