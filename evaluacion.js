@@ -50,13 +50,38 @@
 //     }
 // }
 //Ejercicio 5
-let dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
-for (let i=0;i<dias.length;i++){
-    if(dias[i] === "Sabado" || dias[i] === "Domingo"){
-        alert(`${dias[i]} - Fin de semana!`)
+// let dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+// for (let i=0;i<dias.length;i++){
+//     if(dias[i] === "Sabado" || dias[i] === "Domingo"){
+//         alert(`${dias[i]} - Fin de semana!`)
+//     }
+//     else{
+//         alert(dias[i])
+//     }
+
+// }
+// Ejercicio 6 
+let carrito = []
+let art = true
+let i = 0
+let total = 0
+while(art){
+    let articulo = prompt("Ingrese articulo: ")
+    
+    if(articulo != 0){
+        carrito[i] = articulo
+        i++
+        let costo = prompt("Ingrese monto producto: ")
+        let cantidad = prompt("Cantidad de articulos: ")
+        let precio = costo * cantidad
+        total = total + precio
     }
     else{
-        alert(dias[i])
+        art = false
     }
-
 }
+console.log(carrito)
+document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito[i]} <br> Total a facturar: $${total}`)
+console.log(total)
+
+
