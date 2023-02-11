@@ -85,7 +85,41 @@
 // console.log(total)
 
 //Ejercicio 7
-let carrito = []
+// let carrito = []
+// let art = true
+// let i = 0
+// let total = 0
+// while(art){
+//     let articulo = prompt("Ingrese articulo: ")
+    
+//     if(articulo != 0){
+//         carrito[i] = articulo
+//         i++
+//         let costo = prompt("Ingrese monto producto: ")
+//         let cantidad = prompt("Cantidad de articulos: ")
+//         let precio = costo * cantidad
+//         total = total + precio
+//     }
+//     else{
+//         art = false
+//     }    
+// }
+
+// while(confirm("Desea modificar el carrito?") === true){
+//     let indice = prompt("Indique indice a modificar: ")
+//     if(indice == true){
+//         carrito[indice] = prompt("Ingrese articulo: ")
+//         console.log(carrito[indice])
+//         }
+// }
+// console.log(carrito)
+// document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito} <br> Total a facturar: $${total}`)
+// console.log(total)
+
+//Ejercicio 8
+let items = []
+let precio_por_unidad = []
+let cantidad_comprada = []
 let art = true
 let i = 0
 let total = 0
@@ -93,25 +127,46 @@ while(art){
     let articulo = prompt("Ingrese articulo: ")
     
     if(articulo != 0){
-        carrito[i] = articulo
-        i++
+        items[i] = articulo
         let costo = prompt("Ingrese monto producto: ")
+        precio_por_unidad[i] = costo
         let cantidad = prompt("Cantidad de articulos: ")
+        cantidad_comprada[i] = cantidad
         let precio = costo * cantidad
         total = total + precio
+        i++        
     }
     else{
         art = false
     }    
 }
-
-while(confirm("Desea modificar el carrito?") === true){
-    let indice = prompt("Indique indice a modificar: ")
-    if(indice == true){
-        carrito[indice] = prompt("Ingrese articulo: ")
-        console.log(carrito[indice])
+if(confirm("Desea modificar el carrito?") === true){
+    while(confirm("Presione Aceptar para modificar") === true){
+        let indice = prompt("Indique indice a modificar: ")
+        if(indice == true){
+            items[indice] = prompt("Ingrese articulo: ")
+            precio_por_unidad[indice] = prompt("Ingrese monto producto: ")
+            cantidad_comprada[indice] = prompt("Cantidad de articulos: ")
+            
         }
+        
+    }
+    let total_modificado = 0
+    for(let i = 0; i <= items.length;i++){
+    total_modificado = total_modificado + (Number(precio_por_unidad[i]) * Number(cantidad_comprada[i]))
+    }
+    console.log(items)
+    console.log(precio_por_unidad)
+    console.log(cantidad_comprada)
+    console.log(total_modificado)
+    document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${items} <br> Total a facturar: $${total_modificado}`)
 }
-console.log(carrito)
-document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${carrito} <br> Total a facturar: $${total}`)
-console.log(total)
+else{
+    console.log(items)
+    console.log(precio_por_unidad)
+    console.log(cantidad_comprada)
+    console.log(total)
+    document.write(`FACTURA A - Número XXXXXXX-XXXXXXX-X <br> Items: <br> -${items} <br> Total a facturar: $${total}`)
+}
+
+
